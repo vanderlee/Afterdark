@@ -1,0 +1,69 @@
+/*
+ * Afterdark
+ * Copyright (c) 2011 Martijn W. van der Lee
+ * Licensed under Creative Commons Attribution-Share Alike 3.0
+ * Uses Less.php for compilation, should also work with Less.js
+ * Optimized for...
+ *  Webkit (properties and shadow DOM)
+ *		http://trac.webkit.org/wiki/Styling%20Form%20Controls
+ *		http://trac.webkit.org/browser/trunk/Source/WebCore/css/html.css?rev=82180#L588
+ *		http://qooxdoo.org/documentation/general/webkit_css_styles
+ * css extensions
+ * shadow dom
+ * pseudo classes
+ * pseudo selectors
+ *
+ * @todo :target
+ */
+
+/* Variables
+----------------------------------*/
+@font-family:					"Segoe UI", Verdana, Arial, sans-serif;
+
+@icon-button:					url(images/ui-icons-light.png);
+@icon-header:					url(images/ui-icons-dark.png);
+
+@color-inactive:				#666666;
+@color-hover:					#778877;
+@color-active:					#66cc00;
+@color-disabled:				darken(@color-inactive, 12.5);
+@color-error:					#cc6666;
+
+@color-inactive-text:			#dddddd;
+@color-hover-text:				#eeffee;
+@color-active-text:				#000000;
+@color-disabled-text:			@color-disabled;
+@color-error-text:				#ffffff;
+
+@color-inactive-light:			lighten(@color-inactive, 12.5);
+@color-hover-light:				lighten(@color-hover, 12.5);
+@color-active-light:			lighten(@color-active, 12.5);
+@color-disabled-light:			lighten(@color-disabled, 12.5);
+@color-error-light:				lighten(@color-error, 12.5);
+
+@color-inactive-border:			darken(@color-inactive, 25);
+@color-hover-border:			darken(@color-hover, 25);
+@color-active-border:			darken(@color-active, 25);
+@color-disabled-border:			@color-disabled;
+@color-error-border:			darken(@color-error, 25);
+
+@color-inactive-text-shadow:	rgba(0, 0, 0, .5);
+@color-hover-text-shadow:		@color-inactive-text-shadow;
+@color-active-text-shadow:		rgba(255, 255, 255, .5);
+@color-disabled-text-shadow:	@color-active-text-shadow;
+@color-error-text-shadow:		@color-inactive-text-shadow;
+
+@color-input-inactive:			#cccccc;
+@color-input-hover:				#ccddcc;
+@color-input-active:			#ddeedd;
+@color-input-disabled:			darken(@color-input-inactive, 25);
+
+@color-overlay:					darken(@color-hover, 33);
+
+@color-ruler:					#999999;
+@color-content:					darken(@color-inactive, 10);
+@color-body:					@color-inactive;
+
+/* Start!
+----------------------------------*/
+@import "../core/after.less";

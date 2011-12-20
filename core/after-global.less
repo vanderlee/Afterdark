@@ -1,0 +1,153 @@
+/* Functions
+----------------------------------*/
+.opacity(@alpha) {
+	opacity: @alpha;
+	filter: Alpha(Opacity=floor(@alpha * 100));
+}
+
+.gradient-radial(@color, @left: 50%, @top: 50%) {
+	@dark: darken(@color, 10);
+	@light: lighten(@color, 10);
+
+	background-color: @color;
+ 	background: -moz-radial-gradient(@left @top, circle, @light, @dark);
+	background: -webkit-radial-gradient(@left @top, circle, @light, @dark);
+	background: -o-radial-gradient(@left @top, circle, @light, @dark);
+	background: -ms-radial-gradient(@left @top, circle, @light, @dark);
+	background: radial-gradient(@left @top, circle, @light, @dark);
+}
+
+.gradient-vertical(@top, @bottom) {
+	background-color: @bottom;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @top), color-stop(100%, @bottom)); /* Safari 4+, Chrome 2+ */
+    background: -webkit-linear-gradient(@top, @bottom); /* Safari 5.1+, Chrome 10+ */
+    background: -moz-linear-gradient(@top, @bottom); /* FF 3.6+ */
+    background: -ms-linear-gradient(@top, @bottom); /* IE10 */
+    background: -o-linear-gradient(@top, @bottom); /* Opera 11.10 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top', endColorstr='@bottom'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='@top', endColorstr='@bottom')"; /* IE8+ */
+    background: linear-gradient(@top, @bottom); /* the standard */
+}
+
+.border-radius(@size: 100%) {
+	-moz-border-radius:		@size;
+	-webkit-border-radius:	@size;
+	-khtml-border-radius:	@size;
+	border-radius:			@size;
+}
+
+.box-shadow(@x, @y, @blur, @color, @type:) {
+	-moz-box-shadow:		@x @y @blur @color @type;
+	-webkit-box-shadow:		@x @y @blur @color @type;
+	box-shadow:				@x @y @blur @color @type;	/* Opera supports box-shadow */
+}
+
+.glow(@color: @color-active) {
+	.box-shadow(0, 0, 8px, @color);
+}
+
+/* Global styles
+----------------------------------*/
+.icon-button() {	background-image: @icon-button;	}
+.icon-header() {	background-image: @icon-header;	}
+
+.shadow-inset-content() {	.box-shadow(0, 4px, 8px, rgba(0,0,0,.2), inset);	}
+.shadow-inset-input() {		.box-shadow(2px, 4px, 8px, rgba(0,0,0,.5), inset); }
+.shadow-drop() {			.box-shadow(0, 4px, 8px, rgba(0,0,0,0.3));		}
+.shadow-raise() {			.box-shadow(-2px, -8px, 16px, rgba(0,0,0,.5), inset);	}
+
+.content() {
+	border:			1px solid @color-inactive-border;
+	color:			@color-inactive-text;
+	.gradient-radial(@color-content,, 75%);
+}
+
+.text-shadow-above(@color) {
+	text-shadow:	0 -1px 2px @color;
+}
+.text-shadow-below(@color) {
+	text-shadow:	0 1px 1px @color;
+}
+
+.inactive() {
+	.gradient-vertical(@color-inactive-light, @color-inactive);
+	outline:		0;
+	border:			1px solid @color-inactive-border;
+	color:			@color-inactive-text;
+	.text-shadow-above(@color-inactive-text-shadow);
+	font-weight:	bold;
+}
+
+.hover() {
+	.gradient-vertical(@color-hover-light, @color-hover);
+	outline:		0;
+	border:			1px solid @color-hover-border;
+	color:			@color-hover-text;
+	.text-shadow-above(@color-hover-text-shadow);
+	font-weight:	bold;
+}
+
+.active() {
+	.gradient-vertical(@color-active-light, @color-active);
+	outline:		0;
+	border:			1px solid @color-active-border;
+	color:			@color-active-text;
+	.text-shadow-below(@color-active-text-shadow);
+	font-weight:	bold;
+	.glow;
+}
+
+.disabled() {
+	background-color:	@color-disabled-light;
+	outline:			0;
+	color:				@color-disabled-text;
+	border-color:		@color-disabled-border;
+	.text-shadow-below(@color-disabled-text-shadow);
+}
+
+.error() {
+	.gradient-vertical(@color-error-light, @color-error);
+	outline:		0;
+	border:			1px solid @color-error-border;
+	color:			@color-error-text;
+	.text-shadow-above(@color-error-text-shadow);
+	font-weight:	bold;
+}
+
+/* Animation */
+.transition() {
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition:	all 200ms ease-in-out;
+    -o-transition:		all 200ms ease-in-out;
+    -ms-transition:		all 200ms ease-in-out;
+}
+.transform() {
+	-webkit-transform:	scale(1.25);
+	-moz-transform:		scale(1.25);
+	-o-transform:		scale(1.25);
+	-ms-transform:		scale(1.25);
+}
+
+/* Selected text outside form fields */
+.selection() {
+	background-color:	@color-active;
+	color:				black;
+	text-shadow:		none;
+}
+
+/* Generic control */
+.control() {
+	-webkit-appearance: none !important;
+	outline:			none;
+	padding:			.3em .4em;
+	.color-error-text-below(rgba(255, 255, 255, .5));
+	.shadow-inset-input;
+}
+
+/* Checkbox style and dimensions */
+.checkbox() {
+	-webkit-appearance: none !important;
+	-moz-appearance:	none;
+	width:				1.2em;
+	height:				1.2em;
+}

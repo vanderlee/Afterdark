@@ -1,0 +1,77 @@
+/* Non-standard extensions
+----------------------------------*/
+body {
+	.gradient-radial(@color-body);
+	background-attachment: fixed;
+	color: @color-inactive-text;
+	font-family: @font-family;
+	font-size: 12px;
+}
+
+a {
+	color: @color-active;
+	font-weight: bold;
+}
+
+hr {
+	border: 0;
+	border-top: 2px groove @color-ruler;
+	height: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	.text-shadow-above(@color-active-text);
+}
+
+/* Webkit scrollbars
+----------------------------------*/
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-button {
+	height: 16px;
+	.inactive;
+	.icon-button;
+	background-color: @color-inactive;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {	background-position: 0 -16px;		}
+::-webkit-scrollbar-button:vertical:increment {	background-position: -64px -16px;	}
+::-webkit-scrollbar-button:horizontal:decrement {	background-position: -96px -16px;	}
+::-webkit-scrollbar-button:horizontal:increment {	background-position: -32px -16px;	}
+
+::-webkit-scrollbar-track {
+	border-left: 1px solid black;
+	background-color: @color-inactive-border;
+    .shadow-inset-input;
+}
+::-webkit-scrollbar-thumb {
+	.inactive;
+	background-position: 50% 0;
+}
+::-webkit-scrollbar-thumb:hover {
+	.hover;
+	background-position: 50% 0;
+}
+::-webkit-scrollbar-thumb:active {
+	.active;
+	background-position: 50% 0;
+	box-shadow: none;
+}
+
+/* IE/Opera scrollbars - THIS IS NOT STYLED, JUST SYNTAX EXAMPLE! */
+/*
+scrollbar-base-color: white;
+scrollbar-arrow-color: #527DB5;
+scrollbar-track-color: #EFF7FF;
+scrollbar-shadow-color: #639ACE;
+scrollbar-lightshadow-color: #D6EBFF;
+scrollbar-darkshadow-color: #D6EBFF;
+scrollbar-highlight-color: #D6EBFF;
+scrollbar-3dlight-color: #639ACE;
+*/
+
+::selection			{	.selection;	}
+::-moz-selection	{	.selection;	}
+::-webkit-selection	{	.selection; }
