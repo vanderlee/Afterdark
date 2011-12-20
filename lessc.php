@@ -5,7 +5,7 @@ header('Content-Type: text/css');
 require 'lessc.inc.php';
 
 try {
-	$out = str_replace('.less', '', $_SERVER['QUERY_STRING']);
+	$out = basename(str_replace('.less', '', $_SERVER['QUERY_STRING'])).'.css';
 	@unlink($out);
     lessc::ccompile($_SERVER['QUERY_STRING'], $out);
 

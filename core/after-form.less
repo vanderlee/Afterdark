@@ -1,0 +1,211 @@
+/* Interaction states
+----------------------------------*/
+input[type=button],
+input[type=reset],
+input[type=submit],
+button {
+	.inactive;
+}
+::-webkit-file-upload-button {
+	.ui-state-default;
+}
+
+input[type=button]:enabled:hover,
+input[type=reset]:enabled:hover,
+input[type=submit]:enabled:hover,
+button:enabled:hover {
+	.hover;
+}
+::-webkit-file-upload-button:enabled:hover {
+	.ui-state-hover;
+}
+
+input[type=button]:enabled:active,
+input[type=reset]:enabled:active,
+input[type=submit]:enabled:active,
+button:enabled:active {
+	.active;
+}
+::-webkit-file-upload-button:active {
+	.ui-state-active;
+}
+
+input[type=button],
+input[type=reset],
+input[type=submit],
+button {
+	padding: 2px 1em 3px 1em;
+}
+::-webkit-file-upload-button {
+	padding: 2px 1em 3px 1em;
+}
+::-webkit-file-upload-button {
+	margin: 0;
+	font-family: @font-family;
+	font-size: 13px;
+}
+
+label {
+	display: inline-block;
+	width: 100px;
+	margin-right: 1em;
+	margin-left: 1em;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+textarea,
+select,
+input {
+	border: solid 1px @color-inactive-border;
+	background-color: @color-input-inactive;
+	.control;
+}
+textarea:enabled:hover,
+select:enabled:hover,
+input:enabled:hover {
+	border: 1px solid @color-hover-border;
+	background-color: @color-input-hover;
+}
+
+textarea:enabled:focus,
+select:enabled:focus,
+input:enabled:focus {
+	border: 1px solid @color-active-border;
+	background-color: @color-input-active;
+	.glow;
+}
+
+::-webkit-input-placeholder {
+	color: @color-text-inactive;
+}
+
+input[type=image],
+input[type=submit],
+input[type=reset],
+input[type=button]  {
+	box-shadow: none;
+}
+
+input[type=image],
+input[type=image]:hover {
+	background: transparent;
+	padding: 0;
+	border: 0;
+}
+
+input[type=image]		{	.transition;	}
+input[type=image]:hover {	.transform;		}
+
+input[type=file],
+input[type=file]:hover {
+	-webkit-appearance: none !important;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	box-shadow: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+	margin: 0;
+	width: 16px;
+	border-left: 1px solid black;
+	background: #999999;
+    cursor: ns-resize;
+	.icon-button;
+	background-position: -128px -13px;
+	.shadow-raise;
+}
+
+input[type=radio] {
+	.border-radius;
+}
+
+input[type=radio],
+input[type=checkbox]					{	.inactive; .checkbox;	}
+input[type=range]::-webkit-slider-thumb	{	.inactive; .checkbox;	}
+
+input[type=radio]:hover,
+input[type=checkbox]:hover					{	.hover;	}
+input[type=range]::-webkit-slider-thumb:hover {	.hover;	}
+
+input[type=radio]:checked,
+input[type=checkbox]:checked					{	.active;	}
+input[type=range]::-webkit-slider-thumb:active	{	.active;	}
+
+//@todo input[type=range]::-webkit-slider-container
+//@todo input[type=range]::-webkit-slider-runnable-track
+
+//@todo ::-webkit-validation-bubble
+//@todo ::-webkit-validation-bubble-message
+//@todo ::-webkit-validation-bubble-text-block
+//@todo ::-webkit-validation-bubble-heading
+//@todo ::-webkit-validation-bubble-arrow
+//@todo ::-webkit-validation-bubble-arrow-clipper
+
+//@todo summary::-webkit-details-marker
+
+//@todo input:-webkit-autofill
+
+//@todo ::-webkit-input-placeholder
+//@todo keygen::-webkit-keygen-select
+
+//@todo :-webkit-any()
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {	// webkit only
+	input[type=range] {
+		-webkit-appearance:none !important;
+		height: .4em;
+		.content;
+	}
+}
+
+meter::-webkit-meter,
+progress {
+	-webkit-appearance:none !important;
+}
+meter::-webkit-meter-bar,
+progress::-webkit-progress-bar {
+	.control;
+	height: 1.6em;
+	padding: 0;
+	.content;
+}
+progress::-webkit-progress-value {
+	.active;
+	border-left: 0;
+	border-top: 0;
+	border-bottom: 0;
+}
+meter::-webkit-meter-optimum-value			{	.glow(#77aa44);	}
+meter::-webkit-meter-suboptimum-value		{	.glow(#ddbb44);	}
+meter::-webkit-meter-even-less-good-value	{	.glow(#dd4444);	}
+
+fieldset {
+	.content;
+}
+
+legend {
+	.hover;
+	text-align: center;
+	width: 60%;
+	padding: .2em 1em;
+	margin: 0;
+	border-top: 0;
+}
+
+button:disabled {
+	.disabled;
+}
+
+input:disabled {
+	.disabled;
+	background-color: @color-input-disabled;
+}
+
+input, textarea, keygen, select, button, isindex {
+	margin: 0.2em;
+}

@@ -1,0 +1,51 @@
+/* Variables
+----------------------------------*/
+@font-family:					"Segoe UI", Verdana, Arial, sans-serif;
+
+@icon-button:					url(images/ui-icons-dark.png);
+@icon-header:					url(images/ui-icons-light.png);
+
+@color-inactive:				#dddddd;
+@color-hover:					#cceeff;
+@color-active:					#3399ff;
+@color-disabled:				darken(@color-inactive, 10);
+@color-error:					#ff9999;
+
+@color-inactive-text:			#000000;
+@color-hover-text:				#333399;
+@color-active-text:				#ffffff;
+@color-disabled-text:			@color-disabled;
+@color-error-text:				#660000;
+
+@color-inactive-light:			lighten(@color-inactive, 12.5);
+@color-hover-light:				lighten(@color-hover, 12.5);
+@color-active-light:			lighten(@color-active, 12.5);
+@color-disabled-light:			lighten(@color-disabled, 12.5);
+@color-error-light:				lighten(@color-error, 12.5);
+
+@color-inactive-border:			darken(@color-inactive, 25);
+@color-hover-border:			darken(@color-hover, 25);
+@color-active-border:			darken(@color-active, 25);
+@color-disabled-border:			@color-disabled;
+@color-error-border:			darken(@color-error, 25);
+
+@color-inactive-text-shadow:	rgba(255, 255, 255, .5);
+@color-hover-text-shadow:		@color-inactive-text-shadow;
+@color-active-text-shadow:		rgba(0, 0, 0, .5);
+@color-disabled-text-shadow:	@color-active-text-shadow;
+@color-error-text-shadow:		@color-inactive-text-shadow;
+
+@color-input-enabled:			@color-inactive-light;
+@color-input-hover:				@color-hover-light;
+@color-input-active:			lighten(@color-active-light, 25);
+@color-input-disabled:			lighten(@color-active-light, 25);
+
+@color-overlay:					lighten(@color-inactive, 50);
+
+@color-ruler:					#eeeeee;
+@color-content:					#ffffff;
+@color-body:					#eeeff3;
+
+/* Start!
+----------------------------------*/
+@import "../core/after.less";
