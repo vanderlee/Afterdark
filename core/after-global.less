@@ -51,9 +51,9 @@
 .icon-button() {	background-image: @icon-button;	}
 .icon-header() {	background-image: @icon-header;	}
 
-.shadow-inset-content() {	.box-shadow(0, 4px, 8px, rgba(0,0,0,.2), inset);	}
-.shadow-inset-input() {		.box-shadow(2px, 4px, 8px, rgba(0,0,0,.5), inset); }
-.shadow-drop() {			.box-shadow(0, 4px, 8px, rgba(0,0,0,0.3));		}
+.shadow-inset-content() {	.box-shadow(0, 4px, 8px, rgba(0,0,0,.25), inset);	}
+.shadow-inset-input() {		.box-shadow(2px, 2px, 8px, rgba(0,0,0,.25), inset); }
+.shadow-drop() {			.box-shadow(0, 4px, 8px, rgba(0,0,0,0.25));		}
 .shadow-raise() {			.box-shadow(-2px, -8px, 16px, rgba(0,0,0,.5), inset);	}
 
 .content() {
@@ -116,10 +116,10 @@
 
 /* Animation */
 .transition() {
-	-webkit-transition: all 200ms ease-in-out;
-    -moz-transition:	all 200ms ease-in-out;
-    -o-transition:		all 200ms ease-in-out;
-    -ms-transition:		all 200ms ease-in-out;
+	-webkit-transition: -webkit-transform 200ms ease-in-out;
+    -moz-transition:	-moz-transform 200ms ease-in-out;
+    -o-transition:		-o-transform 200ms ease-in-out;
+    -ms-transition:		-ms-transform 200ms ease-in-out;
 }
 .transform() {
 	-webkit-transform:	scale(1.25);
