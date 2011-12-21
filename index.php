@@ -1,5 +1,6 @@
 <?php
 	require 'lessc.inc.php';
+	require 'lessc_ext.inc.php';
 
 	foreach (scandir(dirname(__FILE__).'/themes') as $file) {
 		$path = dirname(__FILE__).'/themes/'.$file;
@@ -15,7 +16,7 @@
 			$out = dirname(__FILE__)."/$filename.css";
 			@unlink($out);
 
-			lessc::ccompile($path, $out);
+			lessc_ext::ccompile($path, $out);
 
 			$header = "/*\n"
 					. " * ".ucfirst($filename)." jQueryUI theme\n"
