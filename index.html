@@ -23,8 +23,6 @@
 						 switchStylestyle(this.getAttribute("rel"));
 						 return false;
 					  });
-					  var c = readCookie('style');
-					  if (c) switchStylestyle(c);
 				   });
 
 				   function switchStylestyle(styleName)
@@ -34,7 +32,6 @@
 						 this.disabled = true;
 						 if (this.getAttribute('title') == styleName) this.disabled = false;
 					  });
-					  createCookie('style', styleName, 365);
 				   }
 				})(jQuery);
 
@@ -680,6 +677,36 @@
 		<button disabled="disabled">Disabled</button>
 		</form>
 	</p>
+
+
+	<div style="clear:both;">&nbsp;</div>
+
+	<h2>Extra...</h2>
+
+	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<thead>
+			<tr><td>THead TD 1</td><td>THead TD 2</td></tr>
+			<tr><th>THead TH 1</th><th>THead TH 2</th></tr>
+		</thead>
+
+		<tfoot>
+			<tr><td>TFoot TD 1</td><td>TFoot TD 2</td></tr>
+			<tr><th>TFoot TH 1</th><th>TFoot TH 2</th></tr>
+		</tfoot>
+
+		<tbody>
+			<tr class="even"><td>TBody TD 1</td><td>TBody TD 2</td></tr>
+			<tr class="odd"><td>TBody TD 1</td><td>TBody TD 2</td></tr>
+			<tr class="even"><th>TBody TH 1</th><th>TBody TH 2</th></tr>
+			<tr class="odd"><th>TBody TH 1</th><th>TBody TH 2</th></tr>
+		</tbody>
+	</table>
+
+	<div class="body" style="width: 50%; height: 200px;">
+		Applying "body" class to a div
+	</div>
+
+
 	</body>
 </html>
 
