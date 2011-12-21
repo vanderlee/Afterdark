@@ -1,10 +1,13 @@
 Afterdark
 
 Theme for jQueryUI.
-Medium to dark gray with limegreen/olivegreen accents.
 Based on a custom Themeroller theme and extensively modified with CSS3 styling
 and support for standard form elements.
 Currently mostly developed for use on Webkit browsers (Chrome and Safari).
 
 Copyright (c) 2011 Martijn W. van der Lee
 Licensed under Creative Commons Attribution-Share Alike 3.0
+
+Available in a number of variations:
+	Afterdark - Medium to dark gray with limegreen/olivegreen accents.
+	Afternoon - Bright & shiney with refreshing blues.
