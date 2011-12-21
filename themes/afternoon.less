@@ -29,11 +29,11 @@
 @color-disabled-border:			@color-disabled;
 @color-error-border:			darken(@color-error, 25);
 
-@color-inactive-text-shadow:	rgba(255, 255, 255, .5);
-@color-hover-text-shadow:		@color-inactive-text-shadow;
-@color-active-text-shadow:		rgba(0, 0, 0, .5);
-@color-disabled-text-shadow:	@color-active-text-shadow;
-@color-error-text-shadow:		@color-inactive-text-shadow;
+@color-inactive-text-shadow:	opacity(bw(invert(@color-inactive-text)), .5);//rgba(0, 0, 0, .5);
+@color-hover-text-shadow:		opacity(bw(invert(@color-hover-text)), .5);;//@color-inactive-text-shadow;
+@color-active-text-shadow:		opacity(bw(invert(@color-active-text)), .5);;//rgba(255, 255, 255, .5);
+@color-disabled-text-shadow:	opacity(bw(invert(@color-disabled-text)), .5);;//@color-active-text-shadow;
+@color-error-text-shadow:		opacity(bw(invert(@color-error-text)), .5);;//@color-inactive-text-shadow;
 
 @color-input-enabled:			@color-inactive-light;
 @color-input-hover:				@color-hover-light;
