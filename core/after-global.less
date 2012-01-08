@@ -6,8 +6,8 @@
 }
 
 .gradient-radial(@color, @left: 50%, @top: 50%) {
-	@dark: darken(@color, 10);
-	@light: lighten(@color, 10);
+	@dark: darken(@color, @radial-gradient-range);
+	@light: lighten(@color, @radial-gradient-range);
 
 	background-color: @color;
  	background: -moz-radial-gradient(@left @top, circle, @light, @dark);
@@ -42,8 +42,8 @@
 	box-shadow:				@x @y @blur @color @type;	/* Opera supports box-shadow */
 }
 
-.glow(@color: @color-active) {
-	.box-shadow(0, 0, 8px, @color);
+.glow(@color: @color-glow) {
+	.box-shadow(0, 0, @glow-radius, @color);
 }
 
 /* Global styles
