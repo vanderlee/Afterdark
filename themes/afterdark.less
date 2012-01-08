@@ -53,10 +53,6 @@
 @color-disabled-text-shadow:	opacity(bw(invert(@color-disabled-text)), .5);;//@color-active-text-shadow;
 @color-error-text-shadow:		opacity(bw(invert(@color-error-text)), .5);;//@color-inactive-text-shadow;
 
-test{
-	color: @color-inactive-text-shadow;
-}
-
 @color-input-inactive:			#cccccc;
 @color-input-hover:				#ccddcc;
 @color-input-active:			#ddeedd;
@@ -64,9 +60,17 @@ test{
 
 @color-overlay:					darken(@color-hover, 33);
 
+@color-text-link:				lighten(@color-active, 33);
+
 @color-ruler:					#999999;
 @color-content:					darken(@color-inactive, 10);
 @color-body:					@color-inactive;
+
+@radial-gradient-range:			10;
+@glow-radius:					8px;
+@color-glow:					@color-active;
+
+@border-radius:					0;
 
 /* Start!
 ----------------------------------*/

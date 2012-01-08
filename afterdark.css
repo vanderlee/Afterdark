@@ -1,10 +1,9 @@
 /*
  * Afterdark jQueryUI theme
- * Copyright 2011 Martijn W. van der Lee
+ * Copyright 2012 Martijn W. van der Lee
  * Licensed under Creative Commons Attribution-Share Alike 3.0
- * Build 2011-12-21 21:12:33
+ * Build 2012-01-08 10:05:04
  */
-test { color:rgba(0,0,0,0.5); }
 .ui-helper-hidden { display:none; }
 .ui-helper-hidden-accessible {
   position:absolute !important;
@@ -40,6 +39,30 @@ test { color:rgba(0,0,0,0.5); }
   filter:Alpha(Opacity=0);
 }
 .ui-state-disabled { cursor:default !important; }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  -moz-border-radius-topleft:0;
+  -webkit-border-top-left-radius:0;
+  -khtml-border-top-left-radius:0;
+  border-top-left-radius:0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  -moz-border-radius-topright:0;
+  -webkit-border-top-right-radius:0;
+  -khtml-border-top-right-radius:0;
+  border-top-right-radius:0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+  -moz-border-radius-bottomleft:0;
+  -webkit-border-bottom-left-radius:0;
+  -khtml-border-bottom-left-radius:0;
+  border-bottom-left-radius:0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+  -moz-border-radius-bottomright:0;
+  -webkit-border-bottom-right-radius:0;
+  -khtml-border-bottom-right-radius:0;
+  border-bottom-right-radius:0;
+}
 .ui-widget-overlay {
   position:absolute;
   top:0;
@@ -174,12 +197,12 @@ test { color:rgba(0,0,0,0.5); }
   color:#eeffee;
   text-shadow:0 -1px 2px rgba(0,0,0,0.5);
   font-weight:bold;
-  outline:1px solid #3c443c;
+  border-width:2px;
   -moz-box-shadow:0 0 8px #66cc00 ;
   -webkit-box-shadow:0 0 8px #66cc00 ;
   box-shadow:0 0 8px #66cc00 ;
 }
-.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a { color:#ffffff; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a { color:#baff75; }
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
   background-color:#cc6666;
   background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#dc9696),color-stop(100%,#cc6666));
@@ -195,13 +218,12 @@ test { color:rgba(0,0,0,0.5); }
   color:#ffffff;
   text-shadow:0 -1px 2px rgba(0,0,0,0.5);
   font-weight:bold;
-  outline:1px solid #862d2d;
+  border-width:2px;
   -moz-box-shadow:0 0 8px #862d2d ;
   -webkit-box-shadow:0 0 8px #862d2d ;
   box-shadow:0 0 8px #862d2d ;
 }
-.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color:#ffffff; }
-.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color:#ffffff; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color:#baff75; }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight:bold; }
 .ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
   opacity:.7;
@@ -951,7 +973,7 @@ body {
   font-size:12px;
 }
 a {
-  color:#66cc00;
+  color:#baff75;
   font-weight:bold;
 }
 hr {
@@ -1487,5 +1509,5 @@ input, textarea, keygen, select, button, isindex { margin:0.2em; }
   color:#66cc00;
   font-weight:bold;
 }
-.odd { background-color:rgba(77,77,77,0.5); }
-.even { background-color:rgba(128,128,128,0.5); }
+.odd { background-color:rgba(64,64,64,0.5); }
+.even { background-color:rgba(140,140,140,0.5); }

@@ -35,16 +35,24 @@
 @color-disabled-text-shadow:	opacity(bw(invert(@color-disabled-text)), .5);;//@color-active-text-shadow;
 @color-error-text-shadow:		opacity(bw(invert(@color-error-text)), .5);;//@color-inactive-text-shadow;
 
-@color-input-enabled:			@color-inactive-light;
+@color-input-inactive:			@color-inactive-light;
 @color-input-hover:				@color-hover-light;
 @color-input-active:			lighten(@color-active-light, 25);
 @color-input-disabled:			lighten(@color-active-light, 25);
 
 @color-overlay:					lighten(@color-inactive, 50);
 
+@color-text-link:				darken(@color-active, 20);
+
 @color-ruler:					#eeeeee;
 @color-content:					#ffffff;
 @color-body:					#eeeff3;
+
+@radial-gradient-range:			10;
+@glow-radius:					8px;
+@color-glow:					@color-active;
+
+@border-radius:					0;
 
 /* Start!
 ----------------------------------*/
