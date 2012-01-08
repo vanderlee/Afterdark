@@ -5,6 +5,7 @@
 		<title>jQueryUI Example Page</title>
 		<link type="text/css" href="afterdark.css" rel="stylesheet" title="style_afterdark"/>
 		<link type="text/css" href="afternoon.css" rel="alternate stylesheet" title="style_afternoon"/>
+		<link type="text/css" href="afterwork.css" rel="alternate stylesheet" title="style_afterwork"/>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/ui/1.8.13/jquery-ui.min.js"></script>
 		<script type="text/javascript">
@@ -15,25 +16,20 @@
 				* By Kelvin Luck ( http://www.kelvinluck.com/ )
 				**/
 
-				(function($)
-				{
-				   $(document).ready(function() {
-					  $('.styleswitch').click(function()
-					  {
-						 switchStylestyle(this.getAttribute("rel"));
-						 return false;
-					  });
-				   });
+				$('.styleswitch').click(function() {
+					$('.stylename').text($(this).text());
+					switchStylestyle(this.getAttribute("rel"));
+					return false;
+				});
 
-				   function switchStylestyle(styleName)
-				   {
-					  $('link[@rel*=style][title]').each(function(i)
-					  {
-						 this.disabled = true;
-						 if (this.getAttribute('title') == styleName) this.disabled = false;
-					  });
-				   }
-				})(jQuery);
+				function switchStylestyle(styleName) {
+					$('link[@rel*=style][title]').each(function(i) {
+						this.disabled = true;
+						if (this.getAttribute('title') == styleName) {
+							this.disabled = false;
+						}
+					});
+				}
 
 				// Autocomplete
 				var countryList = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burma", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic", "Congo, Republic of the", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Greenland", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Mongolia", "Morocco", "Monaco", "Mozambique", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Samoa", "San Marino", " Sao Tome", "Saudi Arabia", "Senegal", "Serbia and Montenegro", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"];
@@ -114,7 +110,6 @@
 				// Button Set
 				$("#radio1").buttonset();
 
-
 				// Progressbar
 				$("#progressbar").progressbar({
 					value: 37
@@ -149,15 +144,31 @@
 			.columnbox { width: 500px; }
 			#eq span { height: 120px; float: left; margin: 15px; }
 			#countries { width: 300px; }
+
+			#themes {
+				font-size: 1.5em;
+				position: fixed;
+				top: 1em;
+				right: 1em;
+				border: solid 2px black;
+				padding: 1em;
+				z-index: 30000;
+			}
+
 		</style>
 	</head>
 	<body class="ui-form">
+		<div id="themes" class="ui-widget-content ui-widget-shadow">
+			Current style:<br/><b><span class="stylename">Afterdark</span></b>
+			<br/><br/>Switch:
+			<div><a href="#" rel="style_afterdark" class="styleswitch">Afterdark</a></div>
+			<div><a href="#" rel="style_afternoon" class="styleswitch">Afternoon</a></div>
+			<div><a href="#" rel="style_afterwork" class="styleswitch">Afterwork</a></div>
+		</div>
 
 		<h1>"After..." for jQuery UI!</h1>
 
-		<a href="#" rel="style_afterdark" class="styleswitch">Afterdark</a>
-		<a href="#" rel="style_afternoon" class="styleswitch">Afternoon</a>
-
+		Download/source/documentation: <a href="https://github.com/vanderlee/Afterdark">Click here to visit Github repository</a>
 		<hr/>
 
 		<!-- Autocomplete -->
@@ -207,14 +218,14 @@
 		<div class="ui-widget">
 			<div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
 				<p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
-				<strong>Did you know:</strong> Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. </p>
+				Informational text here. <a href="#">Link with more details</a></p>
 			</div>
 		</div>
 		<br/>
 		<div class="ui-widget">
 			<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
 				<p><span class="ui-icon ui-icon-alert" style="float: left; margin-right: .7em;"></span>
-				<strong>Error:</strong> Needs more cowbell. </p>
+				Something really bad happenned. <a href="#">Link with more details</a></p>
 			</div>
 		</div>
 
@@ -709,5 +720,3 @@
 
 	</body>
 </html>
-
-
