@@ -1,0 +1,23 @@
+/*
+ * Afterwork jQueryUI theme
+ * Copyright 2012 Martijn W. van der Lee
+ * Licensed under Creative Commons Attribution-Share Alike 3.0
+ * Build 2012-01-24 18:43:19
+ */
+.theme .ui-form, .theme .body {
+  background-color:#ffffff;
+  background:-moz-radial-gradient(50% 50%,circle,#ffffff,#ffffff);
+  background:-webkit-radial-gradient(50% 50%,circle,#ffffff,#ffffff);
+  background:-o-radial-gradient(50% 50%,circle,#ffffff,#ffffff);
+  background:-ms-radial-gradient(50% 50%,circle,#ffffff,#ffffff);
+  background:radial-gradient(50% 50%,circle,#ffffff,#ffffff);
+  color:#000000;
+  font-family:"Segoe UI", Verdana, Arial, sans-serif;
+  font-size:12px;
+}
+.theme .a {
+  color:#666666;
+  font-weight:bold;
+}
+.theme .odd { background-color:rgba(166,166,166,0.5); }
+.theme .even { background-color:rgba(242,242,242,0.5); }

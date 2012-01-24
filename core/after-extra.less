@@ -1,0 +1,22 @@
+/* Non-standard extensions
+----------------------------------*/
+.ui-form,
+.body {
+	.gradient-radial(@color-body);
+	color: @color-inactive-text;
+	font-family: @font-family;
+	font-size: 12px;
+}
+
+.a {
+	color: @color-active;
+	font-weight: bold;
+}
+
+.odd {
+	background-color: opacity(darken(@color-inactive, 15), .5);
+}
+
+.even {
+	background-color: opacity(lighten(@color-inactive, 15), .5);
+}

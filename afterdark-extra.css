@@ -1,0 +1,23 @@
+/*
+ * Afterdark jQueryUI theme
+ * Copyright 2012 Martijn W. van der Lee
+ * Licensed under Creative Commons Attribution-Share Alike 3.0
+ * Build 2012-01-24 18:43:00
+ */
+.theme .ui-form, .theme .body {
+  background-color:#666666;
+  background:-moz-radial-gradient(50% 50%,circle,#808080,#4d4d4d);
+  background:-webkit-radial-gradient(50% 50%,circle,#808080,#4d4d4d);
+  background:-o-radial-gradient(50% 50%,circle,#808080,#4d4d4d);
+  background:-ms-radial-gradient(50% 50%,circle,#808080,#4d4d4d);
+  background:radial-gradient(50% 50%,circle,#808080,#4d4d4d);
+  color:#dddddd;
+  font-family:"Segoe UI", Verdana, Arial, sans-serif;
+  font-size:12px;
+}
+.theme .a {
+  color:#66cc00;
+  font-weight:bold;
+}
+.theme .odd { background-color:rgba(64,64,64,0.5); }
+.theme .even { background-color:rgba(140,140,140,0.5); }
