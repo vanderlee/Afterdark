@@ -1,0 +1,23 @@
+/*
+ * Afternoon jQueryUI theme
+ * Copyright 2012 Martijn W. van der Lee
+ * Licensed under Creative Commons Attribution-Share Alike 3.0
+ * Build 2012-01-24 18:43:09
+ */
+.theme .ui-form, .theme .body {
+  background-color:#eeeff3;
+  background:-moz-radial-gradient(50% 50%,circle,#ffffff,#d0d3de);
+  background:-webkit-radial-gradient(50% 50%,circle,#ffffff,#d0d3de);
+  background:-o-radial-gradient(50% 50%,circle,#ffffff,#d0d3de);
+  background:-ms-radial-gradient(50% 50%,circle,#ffffff,#d0d3de);
+  background:radial-gradient(50% 50%,circle,#ffffff,#d0d3de);
+  color:#000000;
+  font-family:"Segoe UI", Verdana, Arial, sans-serif;
+  font-size:12px;
+}
+.theme .a {
+  color:#3399ff;
+  font-weight:bold;
+}
+.theme .odd { background-color:rgba(183,183,183,0.5); }
+.theme .even { background-color:rgba(255,255,255,0.5); }
