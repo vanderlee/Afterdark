@@ -1,8 +1,10 @@
 /* Functions
 ----------------------------------*/
 .opacity(@alpha) {
+	@msalpha: floor(@alpha * 100);
+
 	opacity: @alpha;
-	filter: Alpha(Opacity=floor(@alpha * 100));
+	filter: e("Alpha(Opacity=@{msalpha})");
 }
 
 .gradient-radial(@color, @left: 50%, @top: 50%) {
@@ -24,8 +26,8 @@
     background: -moz-linear-gradient(@top, @bottom); /* FF 3.6+ */
     background: -ms-linear-gradient(@top, @bottom); /* IE10 */
     background: -o-linear-gradient(@top, @bottom); /* Opera 11.10 */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@top', endColorstr='@bottom'); /* IE6 & IE7 */
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='@top', endColorstr='@bottom')"; /* IE8+ */
+    filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{top}', endColorstr='@{bottom}')"); /* IE6 & IE7 */
+    -ms-filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{top}', endColorstr='@{bottom}')"); /* IE8+ */
     background: linear-gradient(@top, @bottom); /* the standard */
 }
 
